@@ -5,13 +5,17 @@ var plist = [{"lng":"-79.385865","lat":"43.642424","url":"http://www.ripleyaquar
 var gallery = ["assets/aquarium.png","assets/cntower.jpg","assets/torontozoo.jpg","assets/rom.jpg","assets/artgalleryontario.jpg","assets/yorkdalemall.jpg","assets/torontoeatoncentre.jpg","assets/torontocityhall.jpg","assets/hockey-hall-of-fame.jpg","assets/AirCanadaCentre2.jpg"];
 
 var favPlaces = [];
-/*
+
 var localStore = localStorage;
 var favsFromStorage = localStore.getItem('favPlaces');
 if(favsFromStorage !== undefined && favsFromStorage !== null){
-	console.log(favsFromStorage);
-	favPlaces = JSON.parse(favsFromStorage);
-}*/
+	favPlaces = favsFromStorage.split(",");
+	for(var key in favPlaces){
+		if(favPlaces[key] == "true"){
+			favPlaces[key] = true;
+		}
+	}
+}
 
 /*
 var ExampleGoogleMap = React.createClass({  
@@ -94,7 +98,7 @@ var TableList = React.createClass({
 			favPlaces[this.props.place.key] = false;
 		}
 		
-		//localStore.setItem('favPlaces', JSON.stringify(favPlaces));
+		localStore.setItem('favPlaces', JSON.stringify(favPlaces));
 		
 	  	ReactDOM.render(
 	  		<BrowsePlaces/>,
