@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Places Toronto</title>
+	<link href="css/app.css" rel="stylesheet" type="text/css">
+	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700,300,400italic' rel='stylesheet' type='text/css'>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+	<script src="https://npmcdn.com/react-router/umd/ReactRouter.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcy4reJ2mGvJ-TWyy_iz2IgmlD-D0Z2lw&libraries=places"></script>
+	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+  </head>
+  <body>
+	<h1><span>Places</span> Toronto</h1>
+    <div id="content" class="page"></div>
+    <script type="text/babel" src="src/app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyDx-xOdVnpejbRvEZVmQbcTG1G6EJmm1M0",
+	    authDomain: "testapp-e1b85.firebaseapp.com",
+	    databaseURL: "https://testapp-e1b85.firebaseio.com",
+	    storageBucket: "testapp-e1b85.appspot.com",
+	  };
+	  firebase.initializeApp(config);
+	</script>
+  </body>
+</html>
